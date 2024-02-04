@@ -31,6 +31,8 @@ import { AddcartComponent } from '../Pages/Cart/addcart/addcart.component';
 import { GetallcartComponent } from '../Pages/Cart/getallcart/getallcart.component';
 import { CartbyidComponent } from '../Pages/Cart/cartbyid/cartbyid.component';
 import { uploadimgComponent } from '../Pages/uploadimg/uploadimg.component';
+import { HomeComponent } from './home/home.component';
+
 
 
  
@@ -38,6 +40,8 @@ import { uploadimgComponent } from '../Pages/uploadimg/uploadimg.component';
 
 export const routes: Routes = [
     {path:'adduser',component:AdduserComponent},
+    {path:'home',component:HomeComponent},
+    
     {path:'getallusers',component:GetallUsersComponent},
     {path:'userbyid',component:UserbyidComponent},
     {path:'uploadimg',component:uploadimgComponent},

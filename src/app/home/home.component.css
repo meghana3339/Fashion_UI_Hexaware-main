@@ -1,0 +1,36 @@
+
+.background-image {
+    background-image: url('your-background-image-url.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust to fit your content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color on top of the background image */
+    text-align: center;
+}div {
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #4CAF50;
+    color: rgb(62, 238, 18);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
