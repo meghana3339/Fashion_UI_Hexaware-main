@@ -1,0 +1,32 @@
+.container {
+    margin: 20px;
+}
+
+.table {
+    width: 30%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

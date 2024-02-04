@@ -1,0 +1,62 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>orderId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="orderId" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isorderExist">
+        <tr>
+            <td>OrderId</td>
+            <td>
+                <input type="number" [(ngModel)]="order.orderId" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>productId</td>
+            <td>
+                <input type="number" [(ngModel)]="order.productId" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>userId</td>
+            <td>
+                <input type="number" [(ngModel)]="order.userId" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>orderDate</td>
+            <td>
+                <input type="number" [(ngModel)]="order.orderDate" class="form-control">
+            </td>
+        </tr>
+        <!-- <tr>
+            <td>product</td>
+            <td>
+                <input type="text" [(ngModel)]="order.product" class="form-control">
+            </td>
+        </tr> -->
+        <!-- <tr>
+            <td>user</td>
+            <td>
+                <input type="text" [(ngModel)]="order.user" class="form-control">
+            </td>
+        </tr> -->
+
+    </table>
+</div>
+
+

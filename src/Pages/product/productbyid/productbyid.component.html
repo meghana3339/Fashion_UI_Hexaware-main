@@ -1,0 +1,66 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tbody>
+        <tr>
+            <td>
+                <label>ProductId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="productId" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isProductExist">
+        <tbody>
+        <tr>
+            <td>ProductId</td>
+            <td>
+                <input type="number" [(ngModel)]="product.productId" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>ProductName</td>
+            <td>
+                <input type="text" [(ngModel)]="product.name"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                <input type="number" [(ngModel)]="product.price" class="form-control">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Available</td>
+            <td>
+                <input type="boolean" [(ngModel)]="product.available" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>BrandId</td>
+            <td>
+                <input type="number" [(ngModel)]="product.brandId" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,48 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>brandId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="brandId" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: rgb(43, 255, 0);">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isbrandExist">
+        <tr>
+            <td>brandId</td>
+            <td>
+                <input type="number" [(ngModel)]="brand.brandId" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>brandName</td>
+            <td>
+                <input type="text" [(ngModel)]="brand.brandName" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>
+                <input type="text" [(ngModel)]="brand.description" class="form-control">
+            </td>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="update()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+

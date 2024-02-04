@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>User RatingId</td>
+            <td>
+                <input type="number" [(ngModel)]="userrating.userRatingsId">
+                
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>User Rating(Enter any value from 1-5)</td>
+            <td>
+                <input type="number" [(ngModel)]="userrating.ratings">
+            </td>
+        </tr>
+        <tr>
+            <td>Rated At</td>
+            <td>
+                <input type="datetime-local" [(ngModel)]="userrating.ratedAt">
+            </td>
+        </tr>
+
+        <tr>
+            <td>ProductId</td>
+            <td>
+                <input type="number" [(ngModel)]="userrating.productId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>UserId</td>
+            <td>
+                <input type="number" [(ngModel)]="userrating.userId">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button (click)="submit()">Submit</button> &nbsp;
+            </td>
+        </tr>
+    </table>
+</div>

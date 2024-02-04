@@ -1,0 +1,37 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>OrderId</td>
+            <td>
+                <input type="guid" readonly="order.orderId">
+            </td>
+        </tr>
+        <tr>
+            <td>productId</td>
+            <td>
+                <input type="number" [(ngModel)]="order.productId">
+            </td>
+        </tr>
+        <tr>
+            <td>UserId</td>
+            <td>
+                <input type="number" [(ngModel)]="order.userId">
+            </td>
+        </tr>
+        <tr>
+            <td>OrderDate</td>
+            <td>
+                <input type="datetime-local" [(ngModel)]="order.orderDate">
+            </td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">
+                <button (click)="placeOrder()">Place Order</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+

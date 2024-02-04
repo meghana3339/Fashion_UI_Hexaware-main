@@ -1,0 +1,28 @@
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <li class="nav-item"><a class="nav-link" [routerLink]="'getallproducts'">getallproducts</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'searchproduct'">SearchProduct</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'productbyid'">productbyid</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'productbyprice'">productbyprice</a></li> -->
+                <li class="nav-item"><a class="nav-link" [routerLink]="'orderbyuserid'">Orders</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'userratingsbyid'">Userratings</a></li>
+                
+                <li class="nav-item"><a class="nav-item" [routerLink]="'getallcart'">Getallcarts</a></li>
+                
+                <li class="nav-item"><a class="nav-link" [routerLink]="'login'">LogOut</a></li>
+
+
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+            <router-outlet></router-outlet>
+
+        </div>
+        <!--/main col-->
+    </div>
+
+</div>

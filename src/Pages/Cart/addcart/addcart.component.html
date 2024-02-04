@@ -1,0 +1,38 @@
+<p>ADD TO CART</p>
+<div class="container">
+    <table class="table">
+        <tr>
+            <td> Cart Id</td>
+            <td>
+                <input type="text" [(ngModel)]="cartItem.cartId">
+            </td>
+        </tr>
+
+        <tr>
+            <td> User Id</td>
+            <td>
+                <input type="text" [(ngModel)]="cartItem.userId">
+            </td>
+        </tr>
+
+        <tr>
+            <td> Product Id</td>
+            <td>
+                <input type="text" [(ngModel)]="cartItem.productId">
+            </td>
+        </tr>
+
+        <tr>
+            <td> Quantity</td>
+            <td>
+                <input type="text" [(ngModel)]="cartItem.quantity">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addToCart(cartItem.productId,cartItem.quantity)">Add to Cart</button>
+            </td>
+        </tr>
+        
+    </table>
+</div>

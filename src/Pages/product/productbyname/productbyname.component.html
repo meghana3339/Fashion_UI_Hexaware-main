@@ -1,0 +1,57 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tbody>
+        <tr>
+            <td>
+                <label>ProductName</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="name" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+
+            <!-- <button class="btn btn-secondary mx-2" (click)="sortProduct('asc')">Price:Low to High</button>
+	        <button class="btn btn-secondary mx-2" (click)="sortProduct('desc')">Price:High to Low</button> -->
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isProductExist" border="2">
+        <div class="row mt-2">
+            <div *ngFor="let item of products" [ngClass]="grid ? 'col-6' : 'col-12'">
+                <div class="my-2" style="border: 1px solid;">
+                    <img src="http://localhost:5254/Resources/Images/{{item.image}}" alt="" width="550" height="450">
+                  </div>
+                <div class="my-2" style="border: 1px solid;">ProductId:{{item.productId}}</div>
+                <div class="my-2" style="border: 1px solid;">Product Name:{{item.name}}</div>
+                <div class="my-2" style="border: 1px solid;">Price:{{item.price}}</div>
+                <!-- <div class="my-2" style="border: 1px solid;">BrandId:{{item.brandId}}</div> -->
+                <!-- <div class="my-2" style="border: 1px solid;">Available:{{item.available}}</div> -->
+                <td>
+                    <select (change)="selectQty($event)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+    
+                  </td>
+    
+                  <td><button (click)="addToCart(item.productId)">Add to Cart</button></td>
+            </div>
+        </div>
+        
+    </table>
+</div>
+<div *ngIf="!(isProductExist)">No products available</div>

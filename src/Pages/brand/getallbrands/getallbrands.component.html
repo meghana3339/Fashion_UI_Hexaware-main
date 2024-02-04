@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>brandId</th>
+                <th>brandName</th>
+                <th>description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Brand of brand">
+                <td>{{Brand.brandId}}</td>
+                <td>{{Brand.brandName}}</td>
+                <td>{{Brand.description}}</td>
+                <td>
+                    <button class="btn btn-info" (click)="getId(Brand.brandId)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(Brand.brandId)">Delete</button> &nbsp;
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

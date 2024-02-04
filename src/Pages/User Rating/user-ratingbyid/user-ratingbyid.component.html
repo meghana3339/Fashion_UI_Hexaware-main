@@ -1,0 +1,33 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>UserId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="userId" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: rgb(43, 255, 0);">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isratingExist" border="2">
+        <div class="row mt-2">
+            <div *ngFor="let item of userrating" [ngClass]="grid ? 'col-12' : 'col-12'">
+                <div class="my-2" style="border: 1px solid;">UserRatingId:{{item.userRatingsId}}</div>
+                <div class="my-2" style="border: 1px solid;">Ratings:{{item.ratings}}</div>
+                <div class="my-2" style="border: 1px solid;">RatedAt:{{item.ratedAt}}</div>
+                <div class="my-2" style="border: 1px solid;">ProductId:{{item.productId}}</div>
+                <div class="my-2" style="border: 1px solid;">UserId:{{item.userId}}</div>
+            </div>
+        </div>
+        
+    </table>
+</div>

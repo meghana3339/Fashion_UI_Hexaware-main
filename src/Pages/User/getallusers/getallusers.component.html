@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Email</th>
+                <!-- <th>Password</th> -->
+                <th>Mobile</th>
+                <th>RoleName</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let User of user">
+                <td>{{User.userId}}</td>
+                <td>{{User.name}}</td>
+                <td>{{User.email}}</td>
+                <!-- <td>{{User.password}}</td> -->
+                <td>{{User.mobile}}</td>
+                <td>{{User.roleName}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

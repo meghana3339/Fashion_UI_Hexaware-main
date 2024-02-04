@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>orderId</th>
+                <th>productId</th>
+                <th>userId</th>
+                <th>orderDate</th>
+                <!-- <th>product</th>
+                <th>user</th> -->
+        
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Order of order">
+                <td>{{Order.orderId}}</td>
+                <td>{{Order.productId}}</td>
+                <td>{{Order.userId}}</td>
+                <td>{{Order.orderDate}}</td>
+                <!-- <td>{{Order.product}}</td>
+                <td>{{Order.user}}</td> -->
+                <!-- <td>
+                    
+                    <button class="btn btn-primary" (click)="delete(Order.orderId)">Delete</button> &nbsp;
+                    
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

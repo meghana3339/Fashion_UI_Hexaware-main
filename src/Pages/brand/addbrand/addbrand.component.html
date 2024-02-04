@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>brandId</td>
+            <td>
+                <input type="number" [(ngModel)]="brand.brandId">
+            </td>
+        </tr>
+        <tr>
+            <td>brandName</td>
+            <td>
+                <input type="text" [(ngModel)]="brand.brandName">
+            </td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>
+                <input type="text" [(ngModel)]="brand.description">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addbrand()">Add</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
